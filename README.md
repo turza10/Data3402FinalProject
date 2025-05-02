@@ -36,6 +36,9 @@ The task, as defined by the WiDS 2024 Kaggle challenge, was to predict whether a
 * Displayed correlation matrix heatmaps
 
 
+
+#Corelation and distribution across different groups of features
+
   ![](1.png)
   ![](2.png)
   ![](3.png)
