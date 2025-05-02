@@ -63,12 +63,13 @@ The task, as defined by the WiDS 2024 Kaggle challenge, was to predict whether a
 
 ### Performance Comparison
 
-| Model                         | ROC AUC | Notes                                                      |
-| ----------------------------- | ------- | ---------------------------------------------------------- |
-| Logistic Regression           | \~0.77  | Strong recall, feature scaling required                    |
-| Random Forest (manual tuning) | \~0.78  | Best performance overall, efficient and robust to outliers |
+| Model                         | ROC AUC | 
+| ----------------------------- | ------- | 
+| Logistic Regression           | \~0.77  | 
+| Random Forest (Basic)         | \~0.77  | 
+| Random Forest (manual tuning) | \~0.78  |
 
-The best score on Kaggle was 0.80
+
 
 * ROC Curves plotted for both models
 
