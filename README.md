@@ -6,7 +6,7 @@
 
 ## Overview
 
-The task, as defined by the WiDS 2024 Kaggle challenge, was to predict whether a breast cancer diagnosis occurred within 90 days based on a rich dataset containing patient characteristics, diagnosis codes, geographic and socioeconomic data, and environmental toxicity metrics. Our approach involved rigorous data preprocessing, feature engineering, exploratory data analysis, and the implementation of Logistic Regression and Random Forest models. Our best model achieved an ROC AUC of \~0.78 on validation data.
+The task, as defined by the WiDS 2024 Kaggle challenge, was to predict whether a breast cancer diagnosis occurred within 90 days based on a rich dataset containing patient characteristics, diagnosis codes, geographic and socioeconomic data, and environmental toxicity metrics. The approach involved rigorous data preprocessing, feature engineering, exploratory data analysis, and the implementation of Logistic Regression and Random Forest models. Our best model achieved an ROC AUC of \~0.78 on validation data.
 
 ## Summary of Workdone
 
