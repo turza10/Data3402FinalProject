@@ -35,6 +35,11 @@ The task, as defined by the WiDS 2024 Kaggle challenge, was to predict whether a
 * Created histograms of features like `patient_age`, `bmi`, `PM25`, `Ozone`, `commute_time`, and `education` grouped by diagnosis period
 * Displayed correlation matrix heatmaps
 
+
+  ![](1.png)
+  ![](2.png)
+  ![](3.png)
+
 ### Problem Formulation
 
 * **Input:** 70+ features including demographics, pollution levels, and diagnosis codes
@@ -75,7 +80,7 @@ The best score on Kaggle was 0.80
 
 ### Future Work
 
-* Add SHAP feature importance visualizations
+
 * Explore gradient boosting models like LightGBM and XGBoost
 * Try automated feature selection or dimensionality reduction (e.g., PCA)
 * Prepare for Kaggle submission using prediction file
