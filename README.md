@@ -16,7 +16,7 @@ The task, as defined by the WiDS 2024 Kaggle challenge, was to predict whether a
 
   * Input: patient-level demographic, diagnostic, environmental, and geographic features
   * Output: binary label (`DiagPeriodL90D`) indicating early (<90 days) or late diagnosis
-* **Size:** \~18,000 rows in `training.csv`; a separate `test.csv` file for inference
+* **Size:** \~12,000 rows in `training.csv`; a separate `test.csv` file for inference
 
 ### Preprocessing / Cleanup
 
