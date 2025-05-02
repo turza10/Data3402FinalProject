@@ -41,7 +41,7 @@ Corelation and distribution across different groups of features
 
   ![](1.png)
   ![](2.png)
-  ![](3.png)
+  ![](5.png)
 
 ### Problem Formulation
 
