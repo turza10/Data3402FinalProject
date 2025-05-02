@@ -37,7 +37,7 @@ The task, as defined by the WiDS 2024 Kaggle challenge, was to predict whether a
 
 
 
-#Corelation and distribution across different groups of features
+Corelation and distribution across different groups of features
 
   ![](1.png)
   ![](2.png)
