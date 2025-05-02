@@ -1,3 +1,5 @@
+![](UTA-DataScience-Logo.png)
+
 # Breast Cancer Diagnosis Prediction (WiDS 2024 Challenge)
 
 **One Sentence Summary:** This repository contains a predictive modeling pipeline built to classify breast cancer diagnosis timing using health, demographic, and environmental features, as part of the WiDS Datathon 2024 challenge.
