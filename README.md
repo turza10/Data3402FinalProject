@@ -37,10 +37,14 @@ The task, as defined by the WiDS 2024 Kaggle challenge, was to predict whether a
 
 
 
-Corelation and distribution across different groups of features
+Corelation with Late Diagnosis across individual factrors
 
   ![](1.png)
+
+  Corelation across socio-economic factors
   ![](2.png)
+
+  Distribution across socio-economic factors
   ![](5.png)
 
 ### Problem Formulation
