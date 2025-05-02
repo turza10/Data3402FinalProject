@@ -69,9 +69,7 @@ The task, as defined by the WiDS 2024 Kaggle challenge, was to predict whether a
 | Random Forest (Basic)         | \~0.77  | 
 | Random Forest (manual tuning) | \~0.78  |
 
-
-
-* ROC Curves plotted for both models
+*  ![ROC of Manually Tuned Random Forest](4.jpg)
 
 ### Conclusions
 
