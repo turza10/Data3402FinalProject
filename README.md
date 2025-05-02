@@ -23,14 +23,15 @@ The task, as defined by the WiDS 2024 Kaggle challenge, was to predict whether a
 
   * Numerical columns with training-set mean
   * Categorical columns with mode
-* Applied Label Encoding to all categorical features
-* Clipped outliers in key numeric features using IQR bounds
+* Applied Label Encoding to all categorical features consistently across `train_df` and `test_df`
+* Clipped outliers in selected key numeric features (e.g., `bmi`, `income`, `pollutants`) using IQR bounds
+* Ensured transformations used `train_df` statistics and were applied identically to `test_df`
 
 ### Data Visualization
 
 * Plotted missing value bar chart
-* Visualized distributions of `patient_age`, `bmi`, `PM25`, `Ozone`, `income`, and `education` against the target
-* Generated correlation matrix heatmaps
+* Created histograms of features like `patient_age`, `bmi`, `PM25`, `Ozone`, `commute_time`, and `education` grouped by diagnosis period
+* Displayed correlation matrix heatmaps
 
 ### Problem Formulation
 
@@ -38,36 +39,44 @@ The task, as defined by the WiDS 2024 Kaggle challenge, was to predict whether a
 * **Output:** Binary classification of diagnosis period (<90 days or not)
 * **Models Tried:**
 
-  * Logistic Regression with feature scaling
-  * Random Forest Classifier (baseline and randomized hyperparameter search)
+  * Logistic Regression (with feature scaling using `StandardScaler`)
+  * Random Forest Classifier:
+
+    * Baseline using default parameters
+    * A manually tuned version using common best practices (faster than grid/random search)
 
 ### Training
 
 * Performed train/validation split (80/20) using `train_test_split`
-* Applied `StandardScaler` to Logistic Regression pipeline
-* Used `RandomizedSearchCV` (3-fold CV) for Random Forest tuning to reduce computation time
-* Used sklearn models trained in Google Colab (Python 3.10 environment)
+* Imputed missing values before scaling or modeling
+* Tuned Random Forest using manual hyperparameters:
+
+  * `n_estimators=200`, `max_depth=20`, `min_samples_split=5`, `min_samples_leaf=2`, `class_weight='balanced'`
+* All modeling and visualizations conducted using scikit-learn in Google Colab
 
 ### Performance Comparison
 
-| Model                 | ROC AUC | Notes                                                           |
-| --------------------- | ------- | --------------------------------------------------------------- |
-| Logistic Regression   | \~0.76  | Strong recall, slight overfitting without regularization tuning |
-| Random Forest (tuned) | \~0.77  | Best performance overall, robust to outliers                    |
+| Model                         | ROC AUC | Notes                                                      |
+| ----------------------------- | ------- | ---------------------------------------------------------- |
+| Logistic Regression           | \~0.77  | Strong recall, feature scaling required                    |
+| Random Forest (manual tuning) | \~0.78  | Best performance overall, efficient and robust to outliers |
 
-* Plotted ROC curves for both models on validation set
+The best score on Kaggle was 0.80
+
+* ROC Curves plotted for both models
 
 ### Conclusions
 
-* Random Forest performed better than Logistic Regression without requiring feature scaling
-* Feature engineering and handling missing data contributed significantly to model performance
+* Random Forest was the best-performing model overall with minimal tuning
+* Logistic Regression performed well after proper scaling but was outperformed
+* Consistent preprocessing and feature handling were crucial to success
 
 ### Future Work
 
 * Add SHAP feature importance visualizations
-* Try LightGBM and XGBoost models
-* Experiment with PCA and feature reduction
-* Submit predictions on Kaggle leaderboard
+* Explore gradient boosting models like LightGBM and XGBoost
+* Try automated feature selection or dimensionality reduction (e.g., PCA)
+* Prepare for Kaggle submission using prediction file
 
 ## How to Reproduce Results
 
@@ -97,12 +106,13 @@ Download from: [WiDS Kaggle Challenge 2024](https://www.kaggle.com/competitions/
 ### Training
 
 * Run all preprocessing and model training cells
-* Use `RandomizedSearchCV` block to fine-tune the Random Forest model
+* Logistic Regression requires scaled features
+* Random Forest model runs both as a baseline and manually tuned version
 
 ### Performance Evaluation
 
 * View printed confusion matrix, classification report, and AUC
-* Run ROC curve plots
+* Visualize ROC curve and compare model performance
 
 ## Citations
 
